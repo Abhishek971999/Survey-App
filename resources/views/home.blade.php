@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                   <a href="/questionaire/create">Create Questionaire</a>
                 </div>
             </div>
         </div>

@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/questionaire/create', 'QuestionaireController@create');
+Route::post('/questionaire', 'QuestionaireController@store');
+Route::get('/questionaire/{id}', 'QuestionaireController@show');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
