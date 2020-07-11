@@ -23,7 +23,7 @@ class QuestionaireController extends Controller
     }
 
     public function show(\App\Questionaire $questionaire){
-
+        $questionaire->load('questions.answers');
         return view('questionaire.show',compact('questionaire'));
     }
 }

@@ -22,6 +22,10 @@ Route::get('/questionaire/{questionaire}', 'QuestionaireController@show');
 
 Route::get('/questionaire/{questionaire}/question/create','QuestionController@create');
 Route::post('/questionaire/{questionaire}/question','QuestionController@store');
+
+Route::get('/survey/{questionaire}-{slug}', 'SurveyController@show');
+Route::post('/survey/{questionaire}-{slug}', 'SurveyController@store');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
