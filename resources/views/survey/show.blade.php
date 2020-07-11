@@ -36,7 +36,8 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" aria-describedby="name" name="survey[name]" placeholder="Eg. John Doe">
+                    <input type="text" class="form-control" id="name" aria-describedby="name" name="survey[name]" placeholder="Eg. John Doe"
+                    value={{old('survey.name')}}>
                     @error('survey.name')
                     <small class="text-danger">{{$message}}</small>
                     @enderror
@@ -44,7 +45,7 @@
     
                    <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="email" name="survey[email]" placeholder="Eg. xyz@domain.com">
+                    <input type="email" class="form-control" id="email" aria-describedby="email" name="survey[email]" placeholder="Eg. xyz@domain.com" value={{old('survey.email')}}>
                     @error('survey.email')
                     <small class="text-danger">{{$message}}</small>
                     @enderror   
