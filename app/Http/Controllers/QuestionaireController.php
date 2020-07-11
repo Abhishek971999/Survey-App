@@ -22,8 +22,8 @@ class QuestionaireController extends Controller
         return redirect('/questionaire/'.$questionaire->id);
     }
 
-    public function show($id){
-        $questionaire = \App\Questionaire::findOrFail($id);
+    public function show(\App\Questionaire $questionaire){
+
         return view('questionaire.show',compact('questionaire'));
     }
 }

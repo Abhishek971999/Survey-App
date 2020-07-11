@@ -13,6 +13,7 @@
                     <div class="form-group">
                         <label for="title">Title</label>
                         <input type="text" class="form-control" id="title" aria-describedby="title" name="title" placeholder="Enter Title of Questionaire">
+                        <small id="purpose" class="form-text text-muted">Give a suitable title for the questionaire.</small>
                         @error('title')
                         <small class="text-danger">{{$message}}</small>
                         @enderror
